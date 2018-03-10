@@ -1225,5 +1225,19 @@ config TOUCHSCREEN_SYNAPTICS_DSX
           If unsure, say N.
 
 source "drivers/input/touchscreen/synaptics_dsx/Kconfig"
+source "drivers/input/touchscreen/focaltech_touch/Kconfig"
+
+config TOUCHSCREEN_ILI2120
+       tristate "FocalTech touchscreens"
+       depends on I2C
+       help
+         Say Y here if you have a ili2120 touchscreen.
+	 ili2120 controllers are multi touch controllers which can
+	 report 5 touches at a time.
+
+         If unsure, say N.
+
+         To compile this driver as a module, choose M here: the
+         module will be called ili2120.
 
 endif
