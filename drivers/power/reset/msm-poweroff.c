@@ -59,6 +59,8 @@ static phys_addr_t tcsr_boot_misc_detect;
 static int download_mode = 1;
 static struct kobject dload_kobj;
 
+static bool force_warm_reboot;
+
 #ifdef CONFIG_QCOM_DLOAD_MODE
 #define EDL_MODE_PROP "qcom,msm-imem-emergency_download_mode"
 #define DL_MODE_PROP "qcom,msm-imem-download_mode"
