@@ -31,11 +31,10 @@
 #include <media/msmb_camera.h>
 #include <media/msmb_generic_buf_mgr.h>
 #include <media/msmb_pproc.h>
-#include <soc/qcom/secure_buffer.h>
-
 #include "msm_cpp.h"
 #include "msm_isp_util.h"
 #include "msm_camera_io_util.h"
+#include <linux/debugfs.h>
 #include "cam_smmu_api.h"
 
 #define MSM_CPP_DRV_NAME "msm_cpp"

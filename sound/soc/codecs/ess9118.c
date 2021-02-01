@@ -129,7 +129,7 @@ static int es9118_read_reg(struct i2c_client *client, int reg);
 		SNDRV_PCM_FMTBIT_S24_LE | SNDRV_PCM_FMTBIT_S24_BE | \
 		SNDRV_PCM_FMTBIT_S32_LE | SNDRV_PCM_FMTBIT_S32_BE)
 
-static int es9118_register_dump_parm_set(const char *val, const struct kernel_param *kp)
+static int es9118_register_dump_parm_set(const char *val, struct kernel_param *kp)
 {
 	int i, reg_val;
 	param_set_int(val, kp);

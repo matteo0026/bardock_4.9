@@ -790,6 +790,7 @@ static int msm_isp_buf_done(struct msm_isp_buf_mgr *buf_mgr,
 			state == MSM_ISP_BUFFER_STATE_DIVERTED) {
 #else
 		if (state == MSM_ISP_BUFFER_STATE_DEQUEUED) {
+#endif
 			buf_info->state = MSM_ISP_BUFFER_STATE_DISPATCHED;
 			spin_unlock_irqrestore(&bufq->bufq_lock, flags);
 			buf_mgr->vb2_ops->buf_done(buf_info->vb2_v4l2_buf,
